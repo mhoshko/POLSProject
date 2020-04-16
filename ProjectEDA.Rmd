@@ -1,0 +1,128 @@
+---
+title: "ProjectEDA"
+author: "Madeline Hoshko"
+date: "4/16/2020"
+output: html_document
+---
+
+```{r, include=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(wordcloud)
+library(dplyr)
+library(rtweet)
+library(stringr)
+```
+
+
+# Data import, cleaning, and exploration 
+```{r}
+cf <- readRDS("data/campfire-tweets-2020-04-06.Rds")
+
+Sources <- cf %>%
+  filter(str_detect(screen_name, "CALFIRE_ButteCo|Cal_Fire|ButteSheriff|ChicoPolice|ChicoFD|CountyOfButte|Paradise_CA"))
+
+
+no_outliers <- top_n(Sources, -28, created_at_pst)
+
+Sources %>%
+  group_by(screen_name) %>%
+  summarize(min(created_at_pst))
+
+
+
+no_outliers$screen_name <- as.factor(no_outliers$screen_name)
+
+no_outliers %>% group_by(tweet_hour, screen_name, tweet_min) %>% 
+       summarize(tweet_count=n()) %>% 
+    ggplot(aes(x=tweet_hour, y=tweet_count, fill=screen_name)) + geom_col()
+
+
+range(Sources$created_at_pst)
+
+
+plot.fav  <- no_outliers %>% filter(favorite_count>1) %>% ggplot(aes(x=favorite_count, fill=screen_name)) + geom_histogram()
+plot.rt  <- no_outliers %>% filter(retweet_count>1) %>% ggplot(aes(x=retweet_count, fill=screen_name)) + geom_histogram()
+plot.quo  <- no_outliers %>% filter(quote_count>1) %>% ggplot(aes(x=quote_count, fill=screen_name)) + geom_histogram()
+plot.rply  <- no_outliers %>% filter(reply_count>1) %>% ggplot(aes(x=reply_count, fill=screen_name)) + geom_histogram()
+
+gridExtra::grid.arrange(plot.fav, plot.rt, plot.quo, plot.rply, nrow=2)
+```
+
+```{r}
+news <- cf %>%
+  filter(str_detect(screen_name,"news|News") | str_detect(description, "news|News")) %>%
+  filter(verified=="TRUE")
+
+news_orgs <- cf %>%
+  users_data() %>%
+  distinct(screen_name, .keep_all = TRUE) %>%
+  filter(str_detect(screen_name, "news|News") | str_detect(description, "news|News")) %>%
+  filter(verified=="TRUE") %>%
+  arrange(desc(followers_count)) 
+
+news$user_type <- "news"
+public <- anti_join(x = cf, y = news_orgs, by = "screen_name")
+public$user_type <- "public"
+
+cf <- rbind(public, news)
+
+
+top.20.users <- news %>% 
+  group_by(screen_name) %>% 
+  summarise(n=n()) %>% 
+  arrange(desc(n)) %>% 
+  slice(1:20)
+
+ggplot(top.20.users, aes(x = reorder(screen_name, -n), y=n)) +
+  geom_bar(stat="identity", fill="darkslategray")+
+  theme_minimal() + coord_flip() + 
+  xlab("Users") + ylab("Count")
+```
+
+
+```{r, include=FALSE}
+tweet <- tibble(status_id=Sources$status_id, text=Sources$text)
+remove_reg <- "&amp;|&lt;|&gt;"
+tweet_words <- tweet %>% 
+                  mutate(text = str_remove_all(text, remove_reg)) %>%
+                  unnest_tokens(word, text, token="tweets")
+tweet_words %>% print(n=15)
+data("stop_words")
+head(stop_words)
+
+tweet_words_nostop <- tweet_words %>% anti_join(stop_words)
+head(tweet_words_nostop)
+
+tweet_words_nostop %>% count(word, sort = TRUE)
+
+tweet_words_nostop %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 2000) %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot(aes(word, n)) +
+  geom_col() +
+  xlab(NULL) +
+  coord_flip()
+
+#need to implement proportions graph
+```
+
+
+
+# Applying Sentiments
+I'm interested in the sentiment difference between users who are considered a news outlet vs the general public. We plan to look at more individual political people like the Sheriff when going through this more thoroughly in our project. 
+
+```{r}
+ts1 <- tweet_words_nostop %>%
+          inner_join(get_sentiments("afinn"))
+
+ts2 <- ts1 %>% group_by(status_id) %>% summarize(sentiment=sum(value))
+cf2 <- Sources %>% left_join(ts2, by='status_id')
+
+ggplot(cf2, aes(x=sentiment, col=screen_name)) + geom_density(lwd=2) + theme_minimal()
+```
+
+
