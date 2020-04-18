@@ -61,7 +61,7 @@ name_levels <- c("CALFIRE_ButteCo", "ButteSheriff", "ChicoFD")
 status_colors <- c("#0070C0", "#00B050", "#FFC000")
 no_outliers$screen_name <- factor(no_outliers$screen_name, levels=name_levels, ordered=TRUE)
 
-positions <- c(-2, -0.5, -1.0, 2, -1.5, 1.5, 1, .5, 2.5, -2.5)
+positions <- c(-2, -0.5, -1.0, 2, -1.5, 1.5, 1, .5, 2.5, -2.5, 3, -3, 3.5, -3.5, 4, -4)
 directions <- c(1, -1)
 
 line_pos <- data.frame(
@@ -141,8 +141,8 @@ print(timeline_plot)
 Second Plot Type 
 ```{r}
 library(vistime)
-vistime(no_outliers, events = "text_output", groups = "screen_name", 
-                     start = "created_at_pst", end = "created_at_pst")
+vistime(no_outliers, events = "text", groups = "screen_name", 
+                     start = "created_at_pst", optimize_y = FALSE, show_labels=FALSE)
 
 ```
 And another
