@@ -75,8 +75,6 @@ no_outliers <- merge(x=no_outliers, y=line_pos, by="created_at_pst", all = TRUE)
 no_outliers <- no_outliers[with(no_outliers, order(created_at_pst, screen_name)), ]
 
 
-head(no_outliers)
-
 
 hour_buffer <- 2
 date_range <- seq(min(no_outliers$created_at_pst) - hours(hour_buffer),
