@@ -1,7 +1,7 @@
 ---
 title: "ProjectEDA"
 author: "Madeline Hoshko"
-date: "4/16/2020"
+date: "4/19/2020"
 output: html_document
 ---
 ```{r set-options, echo=FALSE, cache=FALSE}
@@ -34,10 +34,10 @@ library(datetime)
 cf <- readRDS("data/campfire-tweets-2020-04-17.Rds")
 
 Sources <- cf %>%
-  filter(str_detect(screen_name, "CALFIRE_ButteCo|Cal_Fire|ButteSheriff|ChicoPolice|ChicoFD|CountyOfButte|Paradise_CA"))
+  filter(str_detect(screen_name, "CALFIRE_ButteCo|Cal_Fire|ButteSheriff|ChicoPolice|ChicoFD|CountyOfButte|Paradise_CA PGE4Me"))
 
 
-no_outliers <- top_n(Sources, -29, created_at_pst)
+no_outliers <- top_n(Sources, -28, created_at_pst)
 
 no_outliers %>%
   group_by(screen_name) %>%
@@ -147,7 +147,9 @@ gridExtra::grid.arrange(plot.fav, plot.rt, plot.quo, plot.rply, nrow=2)
 # 
 # print(timeline_plot)
 ```
-Second Plot Type 
+
+
+# Timeline Creation
 ```{r}
 library(vistime)
 library(plotly)
@@ -158,10 +160,23 @@ no_outliers$text <- gsub("(\\: )+", "\\:\n", no_outliers$text)
 no_outliers$text <- gsub("(http)", "\nhttp", no_outliers$text)
 
 
-time <- (vistime(no_outliers, events = "text", groups = "screen_name", 
-                     start = "created_at_pst", show_labels=FALSE, color = "#0bc8e0"))
+created_at_pst <- as.POSIXct(c("2018-11-08 6:29:00", "2018-11-08 6:33:00", "2018-11-08 6:44:00", 
+                 "2018-11-08 6:51:00", "2018-11-08 7:00:00", "2018-11-08 7:17:00", 
+                 "2018-11-08 7:23:00", "2018-11-08 7:46:00", "2018-11-08 7:59:00", 
+                 "2018-11-08 8:03:00", "2018-11-08 8:07:00", "2018-11-08 8:15:00",
+                 "2018-11-08 10:45:00"))
 
-timeline <- plotly_build(time)
+text <- c("Camp Fire Starts", "PG&E field crew reports fire under power transmission lines near Poe Dam to Cal Fire", "Captain Matt McKenzie radios for resources and evacuations", "Fire reaches 10 acres", "Fire enters Concow", "Cal Fire begins sending in firefighters", "Evacuation Order given for entire town of Pulga", "A state fire captain calls for an evacuation order for the eastern side of Paradise", "Fire enters Paradise", "Evacuation Order given to the eastern half of Paradise, including all of Pentz Road", "A fallen tree blocks Hoffman Road, Concow main escape route, trapping a state fire crew and 20 residents. Eight die as the fire passes over them.", "Flames are reported at Feather River Hospital. Staff begins to evacuate patients.", "NASA photo shows 20,000 acres burned")
+
+
+day_events <- data.frame(text, created_at_pst)
+day_events$screen_name <- "Events in Real Time"
+timeline_data <- no_outliers[,c("text", "created_at_pst", "screen_name")]
+timeline_data <- rbind(timeline_data, day_events)
+
+time <- (vistime(timeline_data, events = "text", start = "created_at_pst", groups="screen_name", show_labels=FALSE, color = "#0bc8e0", title="Timeline of Events"))
+
+day_timeline <- plotly_build(time)
 
 m <- list(
     l = 50,
@@ -171,25 +186,15 @@ m <- list(
     pad = 4
 )
 
-h <- timeline %>%
+plot <- day_timeline %>%
 layout(autosize = F, width = 1100, height = 600, margin = m)
-h
+plot
 ```
 
 
 
 
 
-
-
-
-
-
-And another
-```{r}
-library(timelineS)
-#timelineS(no_outliers, main = "Life of Michael Jackson")
-```
 
 
 
