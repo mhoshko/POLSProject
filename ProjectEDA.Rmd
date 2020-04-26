@@ -63,15 +63,28 @@ first_morning <- rbind(first_morningMedia, first_morningPublic)
 
 first_morning %>% 
   filter(media == "Media") %>%
+  filter(tweet_min < "2018-11-08 20:00:00") %>%
     group_by(screen_name, tweet_hour) %>%
   summarize(tweet_count=n()) %>%
    ggplot(aes(x=tweet_hour, y=tweet_count, fill=screen_name)) + geom_col()
 
+
 first_morning %>% 
   filter(media == "Public") %>%
-  group_by(tweet_hour) %>%
+  filter(tweet_min < "2018-11-08 20:00:00") %>%
+  group_by(tweet_hour, is_retweet) %>%
   summarize(tweet_count=n()) %>%
-  ggplot(aes(x=tweet_hour, y=tweet_count, label=tweet_count)) + geom_col()
+  ggplot(aes(x=tweet_hour, y=tweet_count, fill=is_retweet)) + geom_col()
+
+# 
+# retweet_screen_name 
+# 
+# first_morning %>% 
+#   filter(media == "Public") %>%
+#   filter(tweet_min < "2018-11-08 20:00:00") %>%
+#   group_by(tweet_hour) %>%
+#   summarize(tweet_count=n()) %>%
+#   ggplot(aes(x=tweet_hour, y=tweet_count, label=tweet_count)) + geom_col()
 
 
 
@@ -169,7 +182,7 @@ timeline_data2 <- filter(timeline_data2, created_at_pst < "2018-11-08 10:00:00")
 # timeline_data2$text <- gsub("(\\: )+", "\\:\n", timeline_data2$text)
 # timeline_data2$text <- gsub("(http)", "\nhttp", timeline_data2$text)
 
-time2 <- (vistime(timeline_data2, events = "text", start = "created_at_pst", groups="media", show_labels=FALSE, color = "#0bc8e0", title="Public vs Media Timeline of Events"))
+time2 <- (vistime(timeline_data2, events = "text", start = "created_at_pst", groups="media", show_labels=FALSE, color = "#0bc8e0", title="Public vs Media Timeline of Tweets"))
 
 day_timeline2 <- plotly_build(time2)
 
