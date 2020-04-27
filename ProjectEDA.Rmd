@@ -77,7 +77,7 @@ first_morning %>%
   group_by(tweet_hour, is_retweet) %>%
   summarize(tweet_count=n()) %>%
   ggplot(aes(x=tweet_hour, y=tweet_count, fill=is_retweet)) + geom_col()  + 
-   labs(x="Time", y="Total Tweets", title="Public Retweets Overall")
+   labs(x="Time", y="Total Tweets", title="Public Response")
 
 
 
