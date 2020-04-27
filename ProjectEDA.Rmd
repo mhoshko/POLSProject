@@ -67,7 +67,8 @@ first_morning %>%
   filter(tweet_min < "2018-11-08 20:00:00") %>%
     group_by(screen_name, tweet_hour) %>%
   summarize(tweet_count=n()) %>%
-   ggplot(aes(x=tweet_hour, y=tweet_count, fill=screen_name)) + geom_col()
+   ggplot(aes(x=tweet_hour, y=tweet_count, fill=screen_name)) + geom_col()  + 
+   labs(x="Time", y="Total Tweets", title="First Response of Local Media")
 
 
 first_morning %>% 
@@ -75,17 +76,20 @@ first_morning %>%
   filter(tweet_min < "2018-11-08 20:00:00") %>%
   group_by(tweet_hour, is_retweet) %>%
   summarize(tweet_count=n()) %>%
-  ggplot(aes(x=tweet_hour, y=tweet_count, fill=is_retweet)) + geom_col()
+  ggplot(aes(x=tweet_hour, y=tweet_count, fill=is_retweet)) + geom_col()  + 
+   labs(x="Time", y="Total Tweets", title="Public Retweets Overall")
 
-# 
-# retweet_screen_name 
-# 
-# first_morning %>% 
-#   filter(media == "Public") %>%
-#   filter(tweet_min < "2018-11-08 20:00:00") %>%
-#   group_by(tweet_hour) %>%
-#   summarize(tweet_count=n()) %>%
-#   ggplot(aes(x=tweet_hour, y=tweet_count, label=tweet_count)) + geom_col()
+
+
+#Public Tweets that Retweeted Our Main Accounts
+ first_morning %>% 
+  filter(media == "Public") %>%
+   filter(tweet_min < "2018-11-08 16:00:00") %>%
+   filter(retweet_screen_name %in% names) %>%
+  group_by(tweet_hour) %>%
+  summarize(tweet_count=n()) %>%
+  ggplot(aes(x=tweet_hour, y=tweet_count)) + geom_col(fill = "#00AFBB") +
+   labs( y="Total Tweets", title="Public Retweets of Local Media Accounts")
 
 
 
@@ -201,6 +205,12 @@ plot <- day_timeline2 %>%
   layout(autosize = F, width = 1100, height = 600, margin = m)
 plot
 ```
+
+```{r}
+
+
+```
+
 
 
 
