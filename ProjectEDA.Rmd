@@ -23,6 +23,7 @@ library(wordcloud)
 library(dplyr)
 library(rtweet)
 library(stringr)
+library(pander)
 library(vistime)
 library(scales)
 library(lubridate)
@@ -91,11 +92,13 @@ first_morning %>%
 first_morning %>%
   filter(media=="Media") %>%
   group_by(screen_name) %>%
-  summarize(min(created_at_pst))
+  summarize(min(created_at_pst))%>%
+  pander()
 
 first_morning %>% 
   filter(media=="Public") %>%
-  summarize(min(created_at_pst))
+  summarize(min(created_at_pst)) %>%
+  pander()
 
 ```
 
