@@ -63,7 +63,7 @@ first_morning <- rbind(first_morningMedia, first_morningPublic)
 
 
 
-first_morning %>% 
+graph3 <- first_morning %>% 
   filter(media == "Media") %>%
   filter(tweet_min < "2018-11-08 16:00:00") %>%
     group_by(screen_name, tweet_hour) %>%
@@ -78,9 +78,11 @@ first_morning %>%
   summarize(tweet_count=n()) %>%
   ggplot(aes(x=tweet_hour, y=tweet_count)) + geom_line()  + 
    labs(x="Time", y="Total Tweets", title="Total Tweets ")
+```
 
+```{r}
 
-first_morning %>% 
+graph4 <- first_morning %>% 
   filter(media == "Public") %>%
   filter(tweet_min < "2018-11-08 20:00:00") %>%
   group_by(tweet_hour, is_retweet) %>%
@@ -89,7 +91,9 @@ first_morning %>%
    labs(x="Time", y="Total Tweets", title="Public Response")
 
 
+```
 
+```{r}
 #Public Tweets that Retweeted Our Main Accounts
  first_morning %>% 
   filter(media == "Public") %>%
@@ -114,11 +118,11 @@ first_morning %>%
   pander()
 
 
-ggplot(first_morning, aes(x=media, fill=media)) + geom_bar() +
+graph1 <- ggplot(first_morning, aes(x=media, fill=media)) + geom_bar() +
   theme(legend.position = "none") + xlab("Tweets") + ylab("") + 
   geom_text(stat="count", aes(label=..count..),  vjust=-1) + ylim(0,500)
 
-first_morning %>% 
+graph2 <- first_morning %>% 
     group_by(tweet_hour) %>%
   summarize(tweet_count=n()) %>%
    ggplot(aes(x=tweet_hour, y=tweet_count, color="#00AFBB")) + geom_line(size=1) +
@@ -183,9 +187,9 @@ m <- list(
     pad = 4
 )
 
-plot <- day_timeline %>%
-  layout(autosize = F, width = 1100, height = 600, margin = m)
-plot
+plot1 <- day_timeline %>%
+  layout(autosize = T, width=1100, margin = m)
+plot1
 ```
 
 ```{r}
@@ -231,9 +235,9 @@ m <- list(
     pad = 4
 )
 
-plot <- day_timeline2 %>%
-  layout(autosize = F, width = 1100, height = 600, margin = m)
-plot
+plot2 <- day_timeline2 %>%
+  layout(autosize = T, width = 1100, margin = m)
+plot2
 ```
 
 ```{r}
