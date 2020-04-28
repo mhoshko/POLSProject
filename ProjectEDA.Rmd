@@ -37,7 +37,7 @@ library(plotly)
 cf <- readRDS("data/campfire-tweets-2020-04-26.Rds")
 
 
-first_morning <- cf %>% filter(created_at_pst < "2018-11-08 20:00:00") %>%
+first_morning <- cf %>% filter(created_at_pst < "2018-11-08 12:00:00") %>%
   filter(created_at_pst > "2018-11-08 06:51:46")
 
 names <- c("CALFIRE_ButteCo", "Cal_Fire", "ButteSheriff", "ChicoPolice", "ChicoFD", "CountyOfButte", "Paradise_CA", "PGE4Me")
@@ -65,11 +65,19 @@ first_morning <- rbind(first_morningMedia, first_morningPublic)
 
 first_morning %>% 
   filter(media == "Media") %>%
-  filter(tweet_min < "2018-11-08 20:00:00") %>%
+  filter(tweet_min < "2018-11-08 16:00:00") %>%
     group_by(screen_name, tweet_hour) %>%
   summarize(tweet_count=n()) %>%
-   ggplot(aes(x=tweet_hour, y=tweet_count, fill=screen_name)) + geom_col()  + 
+   ggplot(aes(x=tweet_hour, y=tweet_count, color=screen_name)) + geom_line(size=1) +
    labs(x="Time", y="Total Tweets", title="First Response of Local Media")
+
+
+
+first_morning %>% 
+  group_by(tweet_hour) %>%
+  summarize(tweet_count=n()) %>%
+  ggplot(aes(x=tweet_hour, y=tweet_count)) + geom_line()  + 
+   labs(x="Time", y="Total Tweets", title="Total Tweets ")
 
 
 first_morning %>% 
@@ -104,6 +112,19 @@ first_morning %>%
   filter(media=="Public") %>%
   summarize(min(created_at_pst)) %>%
   pander()
+
+
+ggplot(first_morning, aes(x=media, fill=media)) + geom_bar() +
+  theme(legend.position = "none") + xlab("Tweets") + ylab("") + 
+  geom_text(stat="count", aes(label=..count..),  vjust=-1) + ylim(0,500)
+
+first_morning %>% 
+    group_by(tweet_hour) %>%
+  summarize(tweet_count=n()) %>%
+   ggplot(aes(x=tweet_hour, y=tweet_count, color="#00AFBB")) + geom_line(size=1) +
+   labs(x="Time", y="Total Tweets", title="First 6 Hours of Tweets") + 
+  theme(legend.position = "none")
+
 
 ```
 
@@ -142,13 +163,15 @@ text <- c("Camp Fire Starts", "PG&E field crew reports fire under power transmis
 
 day_events <- data.frame(text, created_at_pst)
 day_events$screen_name <- "Events in Real Time"
+
 timeline_data <- first_morning %>%
   filter(media=="Media") %>%
   filter(is.na(reply_to_status_id))
 timeline_data <- filter(timeline_data, is_retweet==FALSE)
 timeline_data <- timeline_data[,c("text", "created_at_pst", "screen_name")]
 timeline_dat <- rbind(timeline_data, day_events)
-time <- (vistime(timeline_dat, events = "text", start = "created_at_pst", groups="screen_name", show_labels=FALSE, color = "#0bc8e0", title="Timeline of Events"))
+timeline_dat$color <- "#00AFBB"
+time <- (vistime(timeline_dat, events = "text", start = "created_at_pst", groups="screen_name", show_labels=FALSE, title="Timeline of Events"))
 
 day_timeline <- plotly_build(time)
 
@@ -188,7 +211,7 @@ timeline_data2 <- filter(timeline_data2, is_retweet=="FALSE")
 timeline_data2 <- rbind(timeline_data2, timeline_data)
 
 timeline_data2 <- filter(timeline_data2, created_at_pst < "2018-11-08 10:00:00")
-
+timeline_data2$color <- "#00AFBB"
 
 # timeline_data2$text <- gsub("(\\. )", "\\.\n", timeline_data2$text)
 # timeline_data2$text <- gsub("(^\\#)", "\n\\#", timeline_data2$text)
@@ -196,7 +219,7 @@ timeline_data2 <- filter(timeline_data2, created_at_pst < "2018-11-08 10:00:00")
 # timeline_data2$text <- gsub("(\\: )+", "\\:\n", timeline_data2$text)
 # timeline_data2$text <- gsub("(http)", "\nhttp", timeline_data2$text)
 
-time2 <- (vistime(timeline_data2, events = "text", start = "created_at_pst", groups="media", show_labels=FALSE, color = "#0bc8e0", title="Public vs Media Timeline of Tweets"))
+time2 <- (vistime(timeline_data2, events = "text", start = "created_at_pst", groups="media", show_labels=FALSE, title="Public vs Media Timeline of Tweets"))
 
 day_timeline2 <- plotly_build(time2)
 
