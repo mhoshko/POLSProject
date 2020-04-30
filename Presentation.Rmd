@@ -1,16 +1,17 @@
 ---
-title: ""
+title: "Campfire Response Times"
 output:
   ioslides_presentation:
     widescreen: true
     smaller: true
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Comparing Response Times to the Camp Fire of  Public and Local Officials | Olivia Plazanet, Madeline Hoshko and Taylor Hinchliff
+## Comparing Response Times to the Camp Fire of the Public and Local Officials | Olivia Plazanet, Madeline Hoshko and Taylor Hinchliff
 
 
 ## Introduction and Background
@@ -38,28 +39,34 @@ News now usually appears on social media first.</font>
 
 ## Background and Lit Review 
 
-- <font size="2.75">Disaster Response and Twitter</font>
-  - <font size="2">Why is Twitter data important during disasters?</font>
-    - <font size="2">Twitter gives everyone a “real-time view” of disasters, allowing them to get information quickly from official sources regarding their safety (Ford, 2018).</font>
-  - <font size="2">"Given the volume of data produced, manually managing this process in the immediate aftermath of a crisis is not always practical. There is also often a need for unique updates related to particular topics within and across organizations” (Ford, 2018).</font>
-  - <font size="2">Some groups are coming up with programs specifically tailored towards combing Twitter during disasters for noun-verb pairs that might come up during disasters like “bridge collapsed” and “person trapped”. This could help official response times in future disasters (Ford, 2018).</font>
-- <font size="2.75">Potential Flaws in Phone-Based Warning Systems</font>
-  - <font size="2.75">“Call failure reports released by the Butte County Sheriff’s Office at the request of The Times show that the first evacuation orders requested by firefighters at the scene of the massive blaze frequently failed to connect. About as many calls went to voicemail as were answered by a live person (St. John and Serna, 2018).”</font>
-  - <font size="2.75">If officials are not able to make timely announcements and easily warn the public of a looming disaster, this presents a real problem within our system.</font>
-  - <font size="2.75">In the case of the Camp Fire, the police chief of Paradise said “there was no time for a citywide evacuation order — the city’s own system went down in the midst of a partial order” (St. John and Serna, 2018). This shows a need for a wide array of emergency notification methods, and with California being the state with the largest amount of Twitter users, the platform seems perfect to fit the role of one of these notification methods (Stirtz, 2020).</font>
+- <font size="5">Disaster Response and Twitter</font>
+  - <font size="4">Why is Twitter data important during disasters?</font>
+    - <font size="3">Twitter gives everyone a “real-time view” of disasters, allowing them to get information quickly from official sources regarding their safety (Ford, 2018).</font>
+  - <font size="4">"Given the volume of data produced, manually managing this process in the immediate aftermath of a crisis is not always practical. There is also often a need for unique updates related to particular topics within and across organizations” (Ford, 2018).</font>
+  - <font size="4">Some groups are coming up with programs specifically tailored towards combing Twitter during disasters for noun-verb pairs that might come up during disasters like “bridge collapsed” and “person trapped”. This could help official response times in future disasters (Ford, 2018).</font>
+  
+## Background and Lit Review 
 
-## Background and Lit Review Cont. 
+- <font size="5">Potential Flaws in Phone-Based Warning Systems</font>
+  - <font size="4">“Call failure reports released by the Butte County Sheriff’s Office at the request of The Times show that the first evacuation orders requested by firefighters at the scene of the massive blaze frequently failed to connect. About as many calls went to voicemail as were answered by a live person (St. John and Serna, 2018).”</font>
+  - <font size="4">If officials are not able to make timely announcements and easily warn the public of a looming disaster, this presents a real problem within our system.</font>
+  - <font size="4">In the case of the Camp Fire, the police chief of Paradise said “there was no time for a citywide evacuation order — the city’s own system went down in the midst of a partial order” (St. John and Serna, 2018). This shows a need for a wide array of emergency notification methods, and with California being the state with the largest amount of Twitter users, the platform seems perfect to fit the role of one of these notification methods (Stirtz, 2020).</font>
 
-- <font size="3">Refiguration of disaster social relations</font>
-  - <font size="2.5">The proliferation of new communication technologies is replacing traditional media when it comes to the flow of information, there is a transformation in the visibility of disasters (Cottle 2014).</font>
-  - <font size="2.5">Plays a more progressive part in disasters: connected individuals are becoming more central in emergency responses in humanitarian crisis situations (Cottle 2014).</font>
-  - <font size="2.5">“Challenging the top-down, elite dominated communications” (Cottle 2014)
+## Background and Lit Review 
+
+- <font size="5">Refiguration of disaster social relations</font>
+  - <font size="4">The proliferation of new communication technologies is replacing traditional media when it comes to the flow of information, there is a transformation in the visibility of disasters (Cottle 2014).</font>
+  - <font size="4">Plays a more progressive part in disasters: connected individuals are becoming more central in emergency responses in humanitarian crisis situations (Cottle 2014).</font>
+  - <font size="4">“Challenging the top-down, elite dominated communications” (Cottle 2014)
 There is a civilian surge of information as well as worldwide engagement because of fast-flowing information, collaboration between citizens, disaster relief agencies, volunteers, and public figures (Cottle 2014).</font>
-- <font size="3">Limits to crisis data</font>
-  - <font size="2.5">Once a disaster occurs, data collection starts. However, using social media platforms such as Twitter can create analytical and ethical oversights. Not everybody has access to the internet, where the disaster occurred there can be power outages, etc (Crawford and Finn 2015).</font>
-  - <font size="2.5">Before social media, traditional media was state-controlled, and governments were used to it, but that changed in more recent years (Crawford and Finn 2015).</font>
-  - <font size="2.5">The Twitter algorithm can influence the way tweets are created or how they are retweeted; “bots” can also impede data-collection (Crawford and Finn 2015).</font>
-  - <font size="2.5">People cannot control how their data is used, which can pose a privacy issue. It is important to examine underlying assumptions when using social or mobile data (Crawford and Finn 2015).</font>
+
+## Background and Lit Review 
+
+- <font size="5">Limits to crisis data</font>
+  - <font size="4">Once a disaster occurs, data collection starts. However, using social media platforms such as Twitter can create analytical and ethical oversights. Not everybody has access to the internet, where the disaster occurred there can be power outages, etc (Crawford and Finn 2015).</font>
+  - <font size="4">Before social media, traditional media was state-controlled, and governments were used to it, but that changed in more recent years (Crawford and Finn 2015).</font>
+  - <font size="4">The Twitter algorithm can influence the way tweets are created or how they are retweeted; “bots” can also impede data-collection (Crawford and Finn 2015).</font>
+  - <font size="4">People cannot control how their data is used, which can pose a privacy issue. It is important to examine underlying assumptions when using social or mobile data (Crawford and Finn 2015).</font>
 
 ## Research Problem and Topic Area
 - <font size="5">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font>
@@ -92,7 +99,7 @@ There is a civilian surge of information as well as worldwide engagement because
 
 ## Univariate Description of Explanatory Measure
 ```{r, include = FALSE}
-pkgs = c("stringr", "dplyr", "tidyverse", "readr", "ggplot2", "knitr", "curl")
+pkgs = c("stringr", "dplyr", "tidyverse", "readr", "ggplot2", "knitr", "curl", "gridExtra")
 for (pkg in pkgs){
   if (!require(pkg, character.only = T)){
     install.packages(pkg)
@@ -102,52 +109,71 @@ for (pkg in pkgs){
 purl("ProjectEDA.Rmd", output="part1.r")
 source("part1.r")
 ```
-While the original dataset includes 74,099 tweets, we are only concerned with the tweets that occur within the first 6 hours of the fire starting. This ends up being just 446 tweets, which amounts to 0.60% of the overall data. Of these we have 425 (95.51%) classified as public tweets and 21 (4.71%) classified as media tweets (tweets from our local media accounts)
+<div style="float: left; width: 40%;">
+<font size="5">While the original dataset includes 74,099 tweets, we are only concerned with the tweets that occur within the first 6 hours of the fire starting. This ends up being just 446 tweets, which amounts to 0.60% of the overall data. Of these we have 425 (95.51%) classified as public tweets and 21 (4.71%) classified as media tweets (tweets from our local media accounts). Our explanatory variable is defined as the local media accounts. </font>
+</div>
 
-```{r, echo=FALSE}
+<div style="float: right; width:60%;">
+```{r, echo=FALSE, fig.width=6.6}
 graph1
 ```
-
+</div>
 
 ## Univariate Description of Response Measure 
-Our response measure is the time of the tweets as we are interested in the difference in time between real life events and tweets. Here we show the overall timeline of the first six hours of tweets that we will be referencing throughout. 
+<div style="float: left; width: 40%;">
+<font size="5">Our response measure is the time of the tweets as we are interested in the difference in time between real life events and tweets. Here we show the overall timeline of the first six hours of tweets that we will be referencing throughout. </font>
+<br>
+<br>
+```{r, echo=FALSE, fig.width=5}
+pander(overall_time)
+```
+</div>
 
-```{r, echo=FALSE}
+<div style="float: right; width:60%;">
+```{r, echo=FALSE, fig.width=6.6}
 graph2
 ```
-
+</div>
 
 ## Bivariate Description of Response 
-The response times and amount of responses for each account can be shown here to display the accounts that were most involved within the first hours of the fire. 
-The media’s first response to the fire on Twitter appears at 06:51:47	by CAL FIRE Butte County 
+<div style="float: left; width: 40%;">
+<font size="5">The response times and amount of responses for each account can be shown here to display the accounts that were most involved within the first hours of the fire. 
+The media’s first response to the fire on Twitter appears at 06:51:47	by CAL FIRE Butte County</font>
+<br>
+<br>
+```{r, echo=FALSE, fig.width=5}
+pander(media_time)
+```
+</div>
 
-
-```{r, echo=FALSE}
+<div style="float: right; width: 60%;">
+```{r, echo=FALSE, fig.width=6.8}
 graph3
 ```
-
+</div>
 
 ## Public Tweets
-<font size="2.5">Here we can see the activity of public accounts to see the frequency of tweets. What’s important to note is the vast number of retweets, showing the number of tweets that are typically dispersing the media’s tweets to reach a wider audience. </font>
+<div style="float: left; width: 40%;">
+<font size="5">Here we can see the activity of public accounts to see the frequency of tweets. What’s important to note is the vast number of retweets, showing the number of tweets that are typically dispersing the media’s tweets to reach a wider audience. </font>
 
-<font size="2.5">The first tweet by a public user closely followed CAL FIRE Butte County’s at 06:54:55</font>
+<font size="5">The first tweet by a public user closely followed CAL FIRE Butte County’s at 06:54:55</font>
+</div>
 
-
-```{r, echo = FALSE}
+<div style="float: left; width: 60%;">
+```{r, echo = FALSE, fig.width=6.8}
 graph4
 ```
-
+</div>
 
 ## The Media Response vs Real-Time Events
-In the following timeline each dot signifies a tweet or event to show tweet times in comparison to the real event times. 
-The majority of the tweets shown are evacuation warnings and orders. 
+<font size="4.5">In the following timeline each dot signifies a tweet or event to show tweet times in comparison to the real event times. The majority of the tweets shown are evacuation warnings and orders. </font>
 
 ```{r pressure, echo=FALSE}
 plot1
 ```
 
 ## The Media Response vs Public Response
-After eliminating retweets the following timeline compares the tweet frequency of the public vs the media for the morning up until 10:00 AM. 
+<font size="4.5">After eliminating retweets the following timeline compares the tweet frequency of the public vs the media for the morning up until 10:00 AM. </font>
 
 ```{r, echo=FALSE}
 plot2
@@ -156,29 +182,31 @@ plot2
 ## Discussion/Conclusion
 
 ## References
+<font size="4">Cottle, Simon. (2014). Rethinking Media and Disasters in a Global Age: What's Changed and Why It Matters. Media, War & Conflict. 7. 3-22.10.1177/1750635213513229. https://www.researchgate.net/publication/270633894_Rethinking_Media_and_Disasters_in_a_Global_Age_What's_Changed_and_Why_It_Matters </font>
 
-<font size="2">Elliott, Jennifer. “8 Best Practices for Emergency Communications on Social Media.” EfficientGov, 19 July 2018, 
-www.efficientgov.com/community-engagement/articles/8-best-practices-for-emergency-communications-on-social-media-vwZS7OO5eoblrs3G/. </font>
+<font size="4">Elliott, Jennifer. “8 Best Practices for Emergency Communications on Social Media.” EfficientGov, 19 July 2018, 
+https://www.efficientgov.com/community-engagement/articles/8-best-practices-for-emergency-communications-on-social-media-vwZS7OO5eoblrs3G/. </font>
 
-<font size="2">Epley, Robin (November 8, 2019). “Timeline: Breaking down Nov. 8 - the Day the Camp Fire Sparked.” Chico Enterprise-Record, Chico Enterprise-Record 
-www.chicoer.com/2019/11/07/timeline-breaking-down-nov-8-the-day-the-camp-fire-sparked/. </font>
+<font size="4">Epley, Robin (November 8, 2019). “Timeline: Breaking down Nov. 8 - the Day the Camp Fire Sparked.” Chico Enterprise-Record, Chico Enterprise-Record 
+https://www.chicoer.com/2019/11/07/timeline-breaking-down-nov-8-the-day-the-camp-fire-sparked/. </font>
 
-<font size="2.5">Ford, Jordan. “Improving Disaster Response through Twitter Data.” Penn State University, 2018, 
+<font size="4">Ford, Jordan. “Improving Disaster Response through Twitter Data.” Penn State University, 2018, 
 https://news.psu.edu/story/527730/2018/07/10/research/improving-disaster-response-through-twitter-data. </font>
 
-<font size="2">Kearney MW (2019). “rtweet: Collecting and analyzing Twitter data.” Journal of Open Source Software, 4(42), 1829. Doi: 10.21105/joss.01829, R package version 0.7.0, https://joss.theoj.org/papers/10.21105/joss.01829. </font>
+<font size="4">Kearney MW (2019). “rtweet: Collecting and analyzing Twitter data.” Journal of Open Source Software, 4(42), 1829. Doi: 10.21105/joss.01829, R package version 0.7.0, https://joss.theoj.org/papers/10.21105/joss.01829. </font>
  
-<font size="2">R Core Team (2019). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org. </font>
-
-<font size="2">Radio Ink (March 3, 2020). “The Decline of the Home Radio”.  https://radioink.com/2020/03/03/the-decline-of-the-home-radio/ </font>
-
-<font size="2">Rice, Doyle (January 8, 2019). “USA had world’s 3 costliest natural disasters in 2018, and Camp Fire was the worst”. USA Today. </font>
-
-<font size="2">St. John, Paige, and Joseph Serna. “Camp Fire Evacuation Warnings Failed to Reach More than a Third of Residents Meant to Receive Calls.” Los Angeles Times, 1 Dec. 2018, 
-www.latimes.com/local/california/la-me-ln-paradise-evacuation-warnings-20181130-story.html. </font>
-
-<font size="2">Stirtz, Kevin. “Twitter Ranking: Which States Twitter the Most?” All Business, Dun & Bradstreet, 14 May 2009, www.allbusiness.com/twitter-ranking-which-states-twitter-the-most-12329567-1.html. </font>
 
 
 
+## References cont. 
 
+<font size="4">R Core Team (2019). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org. </font>
+
+<font size="4">Radio Ink (March 3, 2020). “The Decline of the Home Radio”.  https://radioink.com/2020/03/03/the-decline-of-the-home-radio/ </font>
+
+<font size="4">Rice, Doyle (January 8, 2019). “USA had world’s 3 costliest natural disasters in 2018, and Camp Fire was the worst”. USA Today. </font>
+
+<font size="4">St. John, Paige, and Joseph Serna. “Camp Fire Evacuation Warnings Failed to Reach More than a Third of Residents Meant to Receive Calls.” Los Angeles Times, 1 Dec. 2018, 
+https://www.latimes.com/local/california/la-me-ln-paradise-evacuation-warnings-20181130-story.html. </font>
+
+<font size="4">Stirtz, Kevin. “Twitter Ranking: Which States Twitter the Most?” All Business, Dun & Bradstreet, 14 May 2009, https://www.allbusiness.com/twitter-ranking-which-states-twitter-the-most-12329567-1.html. </font>
