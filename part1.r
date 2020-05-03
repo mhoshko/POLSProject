@@ -57,6 +57,8 @@ graph3 <- first_morning %>%
    ggplot(aes(x=tweet_hour, y=tweet_count, color=screen_name)) + geom_line(size=1) +
    labs(x="Time", y="Total Tweets", title="First Response of Local Media")
 
+graph3
+
 
 
 first_morning %>% 
@@ -76,7 +78,7 @@ graph4 <- first_morning %>%
   ggplot(aes(x=tweet_hour, y=tweet_count, fill=is_retweet)) + geom_col()  + 
    labs(x="Time", y="Total Tweets", title="Public Response")
 
-
+graph4
 
 
 ## -----------------------------------------------------------------------------
@@ -90,23 +92,30 @@ graph4 <- first_morning %>%
   ggplot(aes(x=tweet_hour, y=tweet_count)) + geom_col(fill = "#00AFBB") +
    labs( y="Total Tweets", title="Public Retweets of Local Media Accounts")
 
+colnames(first_morning)[colnames(first_morning) == "screen_name"] <- "User"
 
-
-first_morning %>%
+media_time <- first_morning %>%
   filter(media=="Media") %>%
-  group_by(screen_name) %>%
-  summarize(min(created_at_pst))%>%
-  pander()
+  group_by(User) %>%
+  summarize("Time of First Tweet" = min(created_at_pst)) 
 
-first_morning %>% 
-  filter(media=="Public") %>%
-  summarize(min(created_at_pst)) %>%
+media_time
+colnames(first_morning)[colnames(first_morning) == "User"] <- "screen_name"
+
+par(mfrow=c(2,1))
+graph3
+media_time
+#grid.arrange(graph3, media_time, ncol=2)
+
+overall_time <- first_morning %>% 
+  summarize("Time of First Tweet" = min(created_at_pst)) %>%
   pander()
 
 
 graph1 <- ggplot(first_morning, aes(x=media, fill=media)) + geom_bar() +
   theme(legend.position = "none") + xlab("Tweets") + ylab("") + 
-  geom_text(stat="count", aes(label=..count..),  vjust=-1) + ylim(0,500)
+  geom_text(stat="count", aes(label=..count..),  vjust=-1) + ylim(0,440)
+graph1
 
 graph2 <- first_morning %>% 
     group_by(tweet_hour) %>%
@@ -114,7 +123,7 @@ graph2 <- first_morning %>%
    ggplot(aes(x=tweet_hour, y=tweet_count, color="#00AFBB")) + geom_line(size=1) +
    labs(x="Time", y="Total Tweets", title="First 6 Hours of Tweets") + 
   theme(legend.position = "none")
-
+graph2
 
 
 

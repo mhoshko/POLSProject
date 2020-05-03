@@ -3,7 +3,10 @@ title: "Campfire Response Times"
 output:
   ioslides_presentation:
     widescreen: true
-    smaller: true
+    smaller: true 
+    theme: yeti
+    logo: logo.png
+    css: style.css
 ---
 
 
@@ -18,24 +21,42 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Introduction
-
-- <font size="3">For our topic, we chose to examine the Tweet response times of official accounts such as CalFire, the Butte County Sheriff, and others during the Camp Fire, the deadliest and most destructive wildfire in California history and the most expensive natural disaster in the world in 2018 in terms of insured losses (USA Today, 2019).</font>
-- <font size="3">Investigating these kinds of response times  is important, because of the need of accurate, timely warnings and other information should a disaster, natural or otherwise, occur and threaten the lives and livelihoods of people.</font>
-- <font size="3">In the case of previous popular means of communication and warning such as radio, local television, and even direct phone calls, we can no longer rely on these methods reaching every citizen in order to warn them about an impending disaster. Instead, other methods are needed that are more widely used.</font>
-- <font size="3">But unfortunately, a tool is only as useful as the person who uses it. If used incorrectly or inappropriately, it could lead to further danger by misleading or misinforming the public. That is why quick, accurate, and widespread posts with pertinent information can be useful in times of emergency.</font>
-- <font size="3">Algorithms, or set instructions used to perform a simple task in programming, can be used in Twitter to see “trending” or popular terms and hashtags, which can be incredibly useful in times of a crisis if they are used to identify where and what is happening.</font>
-- <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices. And for that reason we have chosen to study the response times of official accounts during the Camp Fire on Twitter, one of the most popular social media platforms in the United States.</font>
+- <font size="3">We will be examining the response times of several “official” Twitter accounts: CalFire, Butte County Sheriff, and Chico Fire Department.</font>
+- <font size="3">Why is this important?</font>
+  - <font size="3">Because of the need of accurate, timely warnings and other information should a disaster, natural or otherwise, occur and threaten the lives and livelihoods of people.</font>
+- <font size="3">What about using television? Phone calls? Radio?</font>
+- <font size="3">How reliable is this information?</font>
+- <font size="3">What if you want more information?</font>
+<!-- - <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices, which can literally be life-saving information during disasters.</font> -->
+<!-- - <font size="3">For our topic, we chose to examine the Tweet response times of official accounts such as CalFire, the Butte County Sheriff, and others during the Camp Fire, the deadliest and most destructive wildfire in California history and the most expensive natural disaster in the world in 2018 in terms of insured losses (USA Today, 2019).</font> -->
+<!-- - <font size="3">Investigating these kinds of response times  is important, because of the need of accurate, timely warnings and other information should a disaster, natural or otherwise, occur and threaten the lives and livelihoods of people.</font> -->
+<!-- - <font size="3">In the case of previous popular means of communication and warning such as radio, local television, and even direct phone calls, we can no longer rely on these methods reaching every citizen in order to warn them about an impending disaster. Instead, other methods are needed that are more widely used.</font> -->
+<!-- - <font size="3">But unfortunately, a tool is only as useful as the person who uses it. If used incorrectly or inappropriately, it could lead to further danger by misleading or misinforming the public. That is why quick, accurate, and widespread posts with pertinent information can be useful in times of emergency.</font> -->
+<!-- - <font size="3">Algorithms, or set instructions used to perform a simple task in programming, can be used in Twitter to see “trending” or popular terms and hashtags, which can be incredibly useful in times of a crisis if they are used to identify where and what is happening.</font> -->
+<!-- - <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices. And for that reason we have chosen to study the response times of official accounts during the Camp Fire on Twitter, one of the most popular social media platforms in the United States.</font> -->
 
 ## Why Use Twitter?
-- <font size="2.75">Social network Twitter is particularly popular in the United States, where as of April 2020, the microblogging service had audience reach of 64.2 million users.</font>
-- <font size="2.75">In the Nielsen ratings for 2018-19, the broadcast networks averaged 28.5 million viewers in primetime, a decline of 7.3 million viewers (20 percent) since 2014-15, so television is becoming less helpful in distributing timely information.</font>
-- <font size="2.75">Radio is also a poor choice for the distribution of time-sensitive announcements, The Infinite Dial research for the past 12 years shows how the radio has been declining in the home. “In 2008 only 4% of Americans reported having no radio in their home, as compared to 32% today (Radio Ink, 2020).</font>
-- <font size="2.75">Not only is social media used by a wide variety of demographics, but it is also used for a significant portion of those citizens’ days and is starting to replace time spent with traditional media. For local governments that have primarily focused their citizen communication strategies around news distribution through traditional media outlets, we now know that social media serves as a more direct and more impactful way to communicate with citizens (EfficientGov, 2018).
-News now usually appears on social media first.</font>
-  - <font size="2">Social media crosses geographic boundaries more quickly.</font>
-  - <font size="2">Social channels are informed by multiple individuals firsthand, often through unofficial sources, but sometimes those who are direct witnesses to events.</font>
-  - <font size="2">Social media is commented upon by active social media users who further share and distribute content.</font>
-- <font size="2.75">Journalists watch social media to identify and report breaking news stories. According to Insignia, 77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font>
+- <font size="3">Television saw a 20% viewership decline between 2014-15 and 2018-19, averaging only 28.5 million viewers in PRIMETIME.</font>
+- <font size="3">Almost a third of all American households do not have a radio in their homes (Radio Ink, 2020).</font>
+- <font size="3">Twitter has an audience of 64.2 million users.</font>
+  - <font size="3">Not only is social media used by a wide variety of demographics, but it is slowly replacing traditional media outlets in terms of news distribution.</font>
+    - <font size="3">News now usually appears on social media first.</font>
+    - <font size="3">Social media crosses geographic boundaries more quickly.</font>
+    - <font size="3">Social channels are informed by multiple individuals firsthand, often through unofficial sources, but sometimes those who are direct witnesses to events.</font>
+    - <font size="3">Social media is commented upon by active social media users who further share and distribute content.</font>
+- <font size="3">Social media provides egalitarian access to the production and the consumption of news (Ceron, 2014).</font>
+- <font size="3">77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font>
+- <font size="3">During November of 2018 alone, CalFire’s official Twitter account saw an increase of almost 35k followers, showing that they were seen by the public as an important source of information (SocialBlade, 2020).</font>
+
+<!-- - <font size="2.75">Social network Twitter is particularly popular in the United States, where as of April 2020, the microblogging service had audience reach of 64.2 million users.</font> -->
+<!-- - <font size="2.75">In the Nielsen ratings for 2018-19, the broadcast networks averaged 28.5 million viewers in primetime, a decline of 7.3 million viewers (20 percent) since 2014-15, so television is becoming less helpful in distributing timely information.</font> -->
+<!-- - <font size="2.75">Radio is also a poor choice for the distribution of time-sensitive announcements, The Infinite Dial research for the past 12 years shows how the radio has been declining in the home. “In 2008 only 4% of Americans reported having no radio in their home, as compared to 32% today (Radio Ink, 2020).</font> -->
+<!-- - <font size="2.75">Not only is social media used by a wide variety of demographics, but it is also used for a significant portion of those citizens’ days and is starting to replace time spent with traditional media. For local governments that have primarily focused their citizen communication strategies around news distribution through traditional media outlets, we now know that social media serves as a more direct and more impactful way to communicate with citizens (EfficientGov, 2018). -->
+<!-- News now usually appears on social media first.</font> -->
+<!--   - <font size="2">Social media crosses geographic boundaries more quickly.</font> -->
+<!--   - <font size="2">Social channels are informed by multiple individuals firsthand, often through unofficial sources, but sometimes those who are direct witnesses to events.</font> -->
+<!--   - <font size="2">Social media is commented upon by active social media users who further share and distribute content.</font> -->
+<!-- - <font size="2.75">Journalists watch social media to identify and report breaking news stories. According to Insignia, 77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font> -->
 
 ## Background and Lit Review 
 
@@ -69,8 +90,12 @@ There is a civilian surge of information as well as worldwide engagement because
   - <font size="4">People cannot control how their data is used, which can pose a privacy issue. It is important to examine underlying assumptions when using social or mobile data (Crawford and Finn 2015).</font>
 
 ## Research Problem and Topic Area
-- <font size="5">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font>
-- <font size="5">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires. One of the goals of our research is to examine the effectiveness of social media in the role of emergency management and expand upon its usefulness in cases of emergencies, in this case specifically the Camp Fire.</font>
+- <font size="4">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font>
+- <font size="4">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires.</font>
+- <font size="4">One of the goals of our research is to examine the timeliness of social media in the role of emergency management by examining the response times of specific accounts along the timeline of the Camp Fire. Because the speed at which pertinent (and potentially life saving) information is so important during these types of events, we will be using a timeline to examine these response times more closely and compare them to the timeline of the actual disaster.</font>
+
+<!-- - <font size="5">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font> -->
+<!-- - <font size="5">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires. One of the goals of our research is to examine the effectiveness of social media in the role of emergency management and expand upon its usefulness in cases of emergencies, in this case specifically the Camp Fire.</font> -->
 
 ## Data Introduction
 - <font size="3">74,099  tweets were collected by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018.</font>
