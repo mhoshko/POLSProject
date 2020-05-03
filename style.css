@@ -1,3 +1,10 @@
+
+body > slides {
+    padding: 0;
+
+}
+
 slides > slide {
   background: #add8e6;
+  border-radius: 0;
 }
