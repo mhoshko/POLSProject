@@ -48,16 +48,6 @@ knitr::opts_chunk$set(echo = FALSE)
 - <font size="3">77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font>
 - <font size="3">During November of 2018 alone, CalFire’s official Twitter account saw an increase of almost 35k followers, showing that they were seen by the public as an important source of information (SocialBlade, 2020).</font>
 
-<!-- - <font size="2.75">Social network Twitter is particularly popular in the United States, where as of April 2020, the microblogging service had audience reach of 64.2 million users.</font> -->
-<!-- - <font size="2.75">In the Nielsen ratings for 2018-19, the broadcast networks averaged 28.5 million viewers in primetime, a decline of 7.3 million viewers (20 percent) since 2014-15, so television is becoming less helpful in distributing timely information.</font> -->
-<!-- - <font size="2.75">Radio is also a poor choice for the distribution of time-sensitive announcements, The Infinite Dial research for the past 12 years shows how the radio has been declining in the home. “In 2008 only 4% of Americans reported having no radio in their home, as compared to 32% today (Radio Ink, 2020).</font> -->
-<!-- - <font size="2.75">Not only is social media used by a wide variety of demographics, but it is also used for a significant portion of those citizens’ days and is starting to replace time spent with traditional media. For local governments that have primarily focused their citizen communication strategies around news distribution through traditional media outlets, we now know that social media serves as a more direct and more impactful way to communicate with citizens (EfficientGov, 2018). -->
-<!-- News now usually appears on social media first.</font> -->
-<!--   - <font size="2">Social media crosses geographic boundaries more quickly.</font> -->
-<!--   - <font size="2">Social channels are informed by multiple individuals firsthand, often through unofficial sources, but sometimes those who are direct witnesses to events.</font> -->
-<!--   - <font size="2">Social media is commented upon by active social media users who further share and distribute content.</font> -->
-<!-- - <font size="2.75">Journalists watch social media to identify and report breaking news stories. According to Insignia, 77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font> -->
-
 ## Background and Lit Review 
 
 - <font size="5">Disaster Response and Twitter</font>
@@ -94,17 +84,21 @@ There is a civilian surge of information as well as worldwide engagement because
 - <font size="4">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires.</font>
 - <font size="4">One of the goals of our research is to examine the timeliness of social media in the role of emergency management by examining the response times of specific accounts along the timeline of the Camp Fire. Because the speed at which pertinent (and potentially life saving) information is so important during these types of events, we will be using a timeline to examine these response times more closely and compare them to the timeline of the actual disaster.</font>
 
-<!-- - <font size="5">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font> -->
-<!-- - <font size="5">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires. One of the goals of our research is to examine the effectiveness of social media in the role of emergency management and expand upon its usefulness in cases of emergencies, in this case specifically the Camp Fire.</font> -->
-
 ## Data Introduction
-- <font size="3">74,099  tweets were collected by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018.</font>
-- <font size="3">A timeline of events from the morning of November 8, 2018 was derived from the Chico Enterprise-Record. (Epley)</font>
-- <font size="3">Each record in the data represents an individual tweet and contains all the information regarding the tweet in terms of who posted it, the times its been retweeted, and more. We are looking specifically into the time of day each tweet was posted to look into the response times of organizations in charge of monitoring the situation.</font>
-- <font size="3">During the data collection the only data that needed to be discarded were results that turned up not belonging to our query as they were not in English. Otherwise, our query that filtered tweets to include one or more of the following: #CampFire, #campfire, #paradise, #Paradise or @CALFIRE_ButteCo" during the correct time frame.</font>
-- <font size="3">The reliability of data collection is important to our research question as we are interested in few accounts and want to ensure we have the most information as possible and that it is accurate since we are concerned with such a small amount of data compared to the entirety of the dataset.</font>
-- <font size="3">We are observing tweets regarding seven public figures’ and organizations’ twitter accounts that were instrumental in dispersing information regarding the Camp Fire, specifically: @Cal_Fire, @CalFire_ButteCo, @ButteSherriff, @ChicoFD, @CountyOfButte, @Paradise_CA, and @ChicoPolice.</font>
-- <font size="3">The data is defined to be a media source when it belongs to one of the previous accounts, while all others are classified as public.</font>
+- <font size="4">74,099 tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018 by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected Using the query: "#CampFire, #campfire, #paradise, #Paradise or @CALFIRE_ButteCo"</font>
+- <font size="4">A timeline of events from the morning of November 8, 2018 was derived from the Chico Enterprise-Record. (Epley)</font>
+- <font size="4">The reliability of data collection is important as we are interested in few accounts and want to ensure we have the most information as possible and that it is accurate since we are concerned with such a small amount of data compared to the entirety of the dataset.</font>
+- <font size="4">We are observing tweets regarding seven public figures’ and organizations’ twitter accounts that were instrumental in dispersing information regarding the Camp Fire, specifically: @Cal_Fire, @CalFire_ButteCo, @ButteSherriff, @ChicoFD, @CountyOfButte, @Paradise_CA, and @ChicoPolice.</font>
+  - <font size="4">Data from these accounts are defined as “media” while all others are defined as “public”</font>
+- <font size="4">Each record in the data represents an individual tweet and contains all the information regarding the tweet in terms of who posted it, the times its been retweeted, and more.</font>
+
+<!-- - <font size="3">74,099  tweets were collected by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018.</font> -->
+<!-- - <font size="3">A timeline of events from the morning of November 8, 2018 was derived from the Chico Enterprise-Record. (Epley)</font> -->
+<!-- - <font size="3">Each record in the data represents an individual tweet and contains all the information regarding the tweet in terms of who posted it, the times its been retweeted, and more. We are looking specifically into the time of day each tweet was posted to look into the response times of organizations in charge of monitoring the situation.</font> -->
+<!-- - <font size="3">During the data collection the only data that needed to be discarded were results that turned up not belonging to our query as they were not in English. Otherwise, our query that filtered tweets to include one or more of the following: #CampFire, #campfire, #paradise, #Paradise or @CALFIRE_ButteCo" during the correct time frame.</font> -->
+<!-- - <font size="3">The reliability of data collection is important to our research question as we are interested in few accounts and want to ensure we have the most information as possible and that it is accurate since we are concerned with such a small amount of data compared to the entirety of the dataset.</font> -->
+<!-- - <font size="3">We are observing tweets regarding seven public figures’ and organizations’ twitter accounts that were instrumental in dispersing information regarding the Camp Fire, specifically: @Cal_Fire, @CalFire_ButteCo, @ButteSherriff, @ChicoFD, @CountyOfButte, @Paradise_CA, and @ChicoPolice.</font> -->
+<!-- - <font size="3">The data is defined to be a media source when it belongs to one of the previous accounts, while all others are classified as public.</font> -->
 
 
 ## Methods
@@ -122,7 +116,7 @@ There is a civilian surge of information as well as worldwide engagement because
 
 ## Results
 
-## Univariate Description of Explanatory Measure
+## Univariate Description of Measures
 ```{r, include = FALSE}
 pkgs = c("stringr", "dplyr", "tidyverse", "readr", "ggplot2", "knitr", "curl", "gridExtra")
 for (pkg in pkgs){
@@ -134,25 +128,23 @@ for (pkg in pkgs){
 purl("ProjectEDA.Rmd", output="part1.r")
 source("part1.r")
 ```
+
+<font size="3">While the original dataset includes 74,099 tweets, we are only concerned with the tweets that occur within the first 6 hours of the fire starting. This ends up being just 446 tweets, which amounts to 0.60% of the overall data.</font>
+
+
 <div style="float: left; width: 40%;">
-<font size="5">While the original dataset includes 74,099 tweets, we are only concerned with the tweets that occur within the first 6 hours of the fire starting. This ends up being just 446 tweets, which amounts to 0.60% of the overall data. Of these we have 425 (95.51%) classified as public tweets and 21 (4.71%) classified as media tweets (tweets from our local media accounts). Our explanatory variable is defined as the local media accounts. </font>
+<font size="4">Explanatory Variable Description:</font>
+
+- <font size="3">Our explanatory variable is the local media accounts. Of the 446 tweets 425 (95.51%) are classified as public and 21 (4.71%) are classified as media (tweets from our local media accounts).</font>
+
+
+<font size="4">Response Variable Description:</font>
+
+- <font size="3">Our response measure is the time of the tweets as we are interested in the difference in time between real life events and tweets.</font>
+
+- <font size="3">The time of the first tweet was 11/08/2018  06:51:47</font>
 </div>
 
-<div style="float: right; width:60%;">
-```{r, echo=FALSE, fig.width=6.6}
-graph1
-```
-</div>
-
-## Univariate Description of Response Measure 
-<div style="float: left; width: 40%;">
-<font size="5">Our response measure is the time of the tweets as we are interested in the difference in time between real life events and tweets. Here we show the overall timeline of the first six hours of tweets that we will be referencing throughout. </font>
-<br>
-<br>
-```{r, echo=FALSE, fig.width=5}
-pander(overall_time)
-```
-</div>
 
 <div style="float: right; width:60%;">
 ```{r, echo=FALSE, fig.width=6.6}
@@ -162,17 +154,17 @@ graph2
 
 ## Bivariate Description of Response 
 <div style="float: left; width: 40%;">
-<font size="5">The response times and amount of responses for each account can be shown here to display the accounts that were most involved within the first hours of the fire. 
+<font size="5">The response times and amount of responses for each account can be shown here to display the media accounts that were most involved within the first hours of the fire. 
 The media’s first response to the fire on Twitter appears at 06:51:47	by CAL FIRE Butte County</font>
 <br>
 <br>
-```{r, echo=FALSE, fig.width=5}
+```{r, echo=FALSE, fig.width=4}
 pander(media_time)
 ```
 </div>
 
 <div style="float: right; width: 60%;">
-```{r, echo=FALSE, fig.width=6.8}
+```{r, echo=FALSE, fig.width=6.7}
 graph3
 ```
 </div>
@@ -190,14 +182,14 @@ graph4
 ```
 </div>
 
-## The Media Response vs Real-Time Events
+## The Media Response Compared to Real-Time Events
 <font size="4.5">In the following timeline each dot signifies a tweet or event to show tweet times in comparison to the real event times. The majority of the tweets shown are evacuation warnings and orders. </font>
 
 ```{r pressure, echo=FALSE}
 plot1
 ```
 
-## The Media Response vs Public Response
+## The Media Response Compared to Public Response
 <font size="4.5">After eliminating retweets the following timeline compares the tweet frequency of the public vs the media for the morning up until 10:00 AM. </font>
 
 ```{r, echo=FALSE}
