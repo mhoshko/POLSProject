@@ -27,62 +27,53 @@ knitr::opts_chunk$set(echo = FALSE)
 - <font size="3">What about using television? Phone calls? Radio?</font>
 - <font size="3">How reliable is this information?</font>
 - <font size="3">What if you want more information?</font>
-<!-- - <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices, which can literally be life-saving information during disasters.</font> -->
-<!-- - <font size="3">For our topic, we chose to examine the Tweet response times of official accounts such as CalFire, the Butte County Sheriff, and others during the Camp Fire, the deadliest and most destructive wildfire in California history and the most expensive natural disaster in the world in 2018 in terms of insured losses (USA Today, 2019).</font> -->
-<!-- - <font size="3">Investigating these kinds of response times  is important, because of the need of accurate, timely warnings and other information should a disaster, natural or otherwise, occur and threaten the lives and livelihoods of people.</font> -->
-<!-- - <font size="3">In the case of previous popular means of communication and warning such as radio, local television, and even direct phone calls, we can no longer rely on these methods reaching every citizen in order to warn them about an impending disaster. Instead, other methods are needed that are more widely used.</font> -->
-<!-- - <font size="3">But unfortunately, a tool is only as useful as the person who uses it. If used incorrectly or inappropriately, it could lead to further danger by misleading or misinforming the public. That is why quick, accurate, and widespread posts with pertinent information can be useful in times of emergency.</font> -->
-<!-- - <font size="3">Algorithms, or set instructions used to perform a simple task in programming, can be used in Twitter to see “trending” or popular terms and hashtags, which can be incredibly useful in times of a crisis if they are used to identify where and what is happening.</font> -->
-<!-- - <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices. And for that reason we have chosen to study the response times of official accounts during the Camp Fire on Twitter, one of the most popular social media platforms in the United States.</font> -->
+- <font size="3">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices, which can literally be life-saving information during disasters.</font> 
 
 ## Why Use Twitter?
-- <font size="3">Television saw a 20% viewership decline between 2014-15 and 2018-19, averaging only 28.5 million viewers in PRIMETIME.</font>
-- <font size="3">Almost a third of all American households do not have a radio in their homes (Radio Ink, 2020).</font>
+- <font size="3">20% television viewership decline between 2014-15 and 2018-19 (28.5 million viewers in PRIMETIME). </font>
+- <font size="3">A third of all US households have no radio at home (Radio Ink, 2020).</font>
+- <font size="3">Over reliance on phone calls or texts for emergency information (St. John, Paige, and Joseph Serna, 2018)</font>
 - <font size="3">Twitter has an audience of 64.2 million users.</font>
-  - <font size="3">Not only is social media used by a wide variety of demographics, but it is slowly replacing traditional media outlets in terms of news distribution.</font>
+  - <font size="3">Social media is slowly replacing traditional media outlets in terms of news distribution.</font>
     - <font size="3">News now usually appears on social media first.</font>
     - <font size="3">Social media crosses geographic boundaries more quickly.</font>
     - <font size="3">Social channels are informed by multiple individuals firsthand, often through unofficial sources, but sometimes those who are direct witnesses to events.</font>
     - <font size="3">Social media is commented upon by active social media users who further share and distribute content.</font>
 - <font size="3">Social media provides egalitarian access to the production and the consumption of news (Ceron, 2014).</font>
-- <font size="3">77 percent of journalists say social media is important to them for learning about potential stories more quickly, and the same percentage say social media is important in reporting stories more quickly (Elliott 2018).</font>
-- <font size="3">During November of 2018 alone, CalFire’s official Twitter account saw an increase of almost 35k followers, showing that they were seen by the public as an important source of information (SocialBlade, 2020).</font>
+- <font size="3">77% of journalists say social media is important to them for learning about potential stories more quickly, and that it is important in reporting stories more quickly (Elliott 2018).</font>
+- <font size="3">During November of 2018 alone, CalFire’s official Twitter account gained about 35k followers, which shows them to be an important source of information for the public (SocialBlade, 2020).</font>
 
 ## Background and Lit Review 
 
 - <font size="5">Disaster Response and Twitter</font>
   - <font size="4">Why is Twitter data important during disasters?</font>
-    - <font size="3">Twitter gives everyone a “real-time view” of disasters, allowing them to get information quickly from official sources regarding their safety (Ford, 2018).</font>
-  - <font size="4">"Given the volume of data produced, manually managing this process in the immediate aftermath of a crisis is not always practical. There is also often a need for unique updates related to particular topics within and across organizations” (Ford, 2018).</font>
-  - <font size="4">Some groups are coming up with programs specifically tailored towards combing Twitter during disasters for noun-verb pairs that might come up during disasters like “bridge collapsed” and “person trapped”. This could help official response times in future disasters (Ford, 2018).</font>
-  
-## Background and Lit Review 
+    - <font size="3">Gives a “real-time view” of disasters, allows fast-flowing information quickly from official sources (Ford, 2018).</font>
+  - <font size="4">There is a need for unique updates across organizations given the volume of data produced because manually managing is not always practical right after a disaster (Ford, 2018).</font>
+  - <font size="4">New programs tailored towards combing Twitter during disasters for noun-verb pairs like “bridge collapsed” and “person trapped”. This helps official response times in future disasters (Ford, 2018).</font>
 
 - <font size="5">Potential Flaws in Phone-Based Warning Systems</font>
-  - <font size="4">“Call failure reports released by the Butte County Sheriff’s Office at the request of The Times show that the first evacuation orders requested by firefighters at the scene of the massive blaze frequently failed to connect. About as many calls went to voicemail as were answered by a live person (St. John and Serna, 2018).”</font>
-  - <font size="4">If officials are not able to make timely announcements and easily warn the public of a looming disaster, this presents a real problem within our system.</font>
-  - <font size="4">In the case of the Camp Fire, the police chief of Paradise said “there was no time for a citywide evacuation order — the city’s own system went down in the midst of a partial order” (St. John and Serna, 2018). This shows a need for a wide array of emergency notification methods, and with California being the state with the largest amount of Twitter users, the platform seems perfect to fit the role of one of these notification methods (Stirtz, 2020).</font>
+  - <font size="4">Butte County Sheriff’s office showed that the first evacuation orders requested by firefighters failed to connect. Half of the calls went to voicemail (St. John and Serna, 2018).”</font>
+  - <font size="4">This inefficiency presents a real problem within our system.</font>
+  - <font size="4">The police chief of Paradise said “there was no time for a citywide evacuation order — the city’s own system went down in the midst of a partial order” (St. John and Serna, 2018). With California having the most Twitter users, there needs to be a wide array of emergency notification methods through Twitter (Stirtz, 2020).</font>
 
 ## Background and Lit Review 
 
 - <font size="5">Refiguration of disaster social relations</font>
-  - <font size="4">The proliferation of new communication technologies is replacing traditional media when it comes to the flow of information, there is a transformation in the visibility of disasters (Cottle 2014).</font>
-  - <font size="4">Plays a more progressive part in disasters: connected individuals are becoming more central in emergency responses in humanitarian crisis situations (Cottle 2014).</font>
-  - <font size="4">“Challenging the top-down, elite dominated communications” (Cottle 2014)
-There is a civilian surge of information as well as worldwide engagement because of fast-flowing information, collaboration between citizens, disaster relief agencies, volunteers, and public figures (Cottle 2014).</font>
-
-## Background and Lit Review 
+  - <font size="4">New communication technologies replacing traditional media, transformation of disaster visibility (Cottle 2014).</font>
+  - <font size="4">Individuals are central in emergency responses (Cottle 2014).</font>
+  - <font size="4">“Challenging the top-down, elite dominated communications” (Cottle 2014)</font>
+  - <font size="4">Civilian surge of information and worldwide engagement because of fast-flowing information, collaboration between citizens, disaster relief agencies, volunteers, and public figures (Cottle 2014).</font>
 
 - <font size="5">Limits to crisis data</font>
-  - <font size="4">Once a disaster occurs, data collection starts. However, using social media platforms such as Twitter can create analytical and ethical oversights. Not everybody has access to the internet, where the disaster occurred there can be power outages, etc (Crawford and Finn 2015).</font>
-  - <font size="4">Before social media, traditional media was state-controlled, and governments were used to it, but that changed in more recent years (Crawford and Finn 2015).</font>
-  - <font size="4">The Twitter algorithm can influence the way tweets are created or how they are retweeted; “bots” can also impede data-collection (Crawford and Finn 2015).</font>
-  - <font size="4">People cannot control how their data is used, which can pose a privacy issue. It is important to examine underlying assumptions when using social or mobile data (Crawford and Finn 2015).</font>
+  - <font size="4">When data collection starts, social media platforms can create analytical and ethical oversights (limited access to the internet during a disaster: power outages, etc) (Crawford and Finn 2015).</font>
+  - <font size="4">Traditional media was state-controlled, but that changed in more recent years (Crawford and Finn 2015).</font>
+  - <font size="4">The Twitter algorithm influences the way tweets are created or how they are retweeted; “bots” can also impede data-collection (Crawford and Finn 2015).</font>
+  - <font size="4">People cannot control how their data is used: privacy issue (Crawford and Finn 2015).</font>
 
 ## Research Problem and Topic Area
-- <font size="4">How timely were the twitter accounts run by public officials and emergency services when it came to disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font>
-- <font size="4">While there is a large amount of research that has been done regarding the usefulness of social media and its innovative uses in emergency management, the majority of the case studies have revolved around incidents such as earthquakes. In a study conducted by the US Department of Homeland Security in 2013, out of the six cases that were examined only one of them pertained to wildfires.</font>
-- <font size="4">One of the goals of our research is to examine the timeliness of social media in the role of emergency management by examining the response times of specific accounts along the timeline of the Camp Fire. Because the speed at which pertinent (and potentially life saving) information is so important during these types of events, we will be using a timeline to examine these response times more closely and compare them to the timeline of the actual disaster.</font>
+- <font size="4">How timely were public officials and emergency services twitter accounts in disseminating important and crucial information to the public during the Camp Fire? We will create a timeline of events to illustrate this problem.</font>
+- <font size="4">Most research done regarding social media and its innovative uses in emergency management revolves around incidents such as earthquakes (only a sixth of cases pertained to wildfires).</font>
+- <font size="4">One of our goals is to examine the timeliness of social media in emergency management by examining the response times of specific accounts along the timeline of the Camp Fire. We will use a timeline to examine these response times more closely and compare them to the timeline of the actual disaster.</font>
 
 ## Data Introduction
 - <font size="4">74,099 tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018 by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected Using the query: "#CampFire, #campfire, #paradise, #Paradise or @CALFIRE_ButteCo"</font>
@@ -91,14 +82,6 @@ There is a civilian surge of information as well as worldwide engagement because
 - <font size="4">We are observing tweets regarding seven public figures’ and organizations’ twitter accounts that were instrumental in dispersing information regarding the Camp Fire, specifically: @Cal_Fire, @CalFire_ButteCo, @ButteSherriff, @ChicoFD, @CountyOfButte, @Paradise_CA, and @ChicoPolice.</font>
   - <font size="4">Data from these accounts are defined as “media” while all others are defined as “public”</font>
 - <font size="4">Each record in the data represents an individual tweet and contains all the information regarding the tweet in terms of who posted it, the times its been retweeted, and more.</font>
-
-<!-- - <font size="3">74,099  tweets were collected by the Spring 2020 Advanced Data Science class at CSU, Chico. Tweets were collected using the rtweet (Kearney MW 2019) package using R 3.6.2 (R Core Team) beginning the morning of November 11, 2018.</font> -->
-<!-- - <font size="3">A timeline of events from the morning of November 8, 2018 was derived from the Chico Enterprise-Record. (Epley)</font> -->
-<!-- - <font size="3">Each record in the data represents an individual tweet and contains all the information regarding the tweet in terms of who posted it, the times its been retweeted, and more. We are looking specifically into the time of day each tweet was posted to look into the response times of organizations in charge of monitoring the situation.</font> -->
-<!-- - <font size="3">During the data collection the only data that needed to be discarded were results that turned up not belonging to our query as they were not in English. Otherwise, our query that filtered tweets to include one or more of the following: #CampFire, #campfire, #paradise, #Paradise or @CALFIRE_ButteCo" during the correct time frame.</font> -->
-<!-- - <font size="3">The reliability of data collection is important to our research question as we are interested in few accounts and want to ensure we have the most information as possible and that it is accurate since we are concerned with such a small amount of data compared to the entirety of the dataset.</font> -->
-<!-- - <font size="3">We are observing tweets regarding seven public figures’ and organizations’ twitter accounts that were instrumental in dispersing information regarding the Camp Fire, specifically: @Cal_Fire, @CalFire_ButteCo, @ButteSherriff, @ChicoFD, @CountyOfButte, @Paradise_CA, and @ChicoPolice.</font> -->
-<!-- - <font size="3">The data is defined to be a media source when it belongs to one of the previous accounts, while all others are classified as public.</font> -->
 
 
 ## Methods
@@ -198,8 +181,23 @@ plot2
 
 ## Discussion/Conclusion
 
+## What Does it All Mean?
+- <font size="5">Our results show that Twitter can be used to disseminate important and potentially life saving information in a timely manner, as was seen on the timeline of events for the Camp Fire.</font>
+- <font size="5">From our Twitter data, we can also see that Twitter can provide individuals with this information in a consistent manner, when other media methods may be ineffective in sharing this data (such as losing power during a disaster and being unable to receive news via television).</font>
+- <font size="5">This ultimately means that social media platforms such as Twitter, if used properly, can be an important tool when it comes to emergency alert systems.</font>
+
+## Why Should We Care?
+- <font size="4">In these changing times, especially with social media developing to be one of the essential means of communication, it is important to examine the place of Twitter in these new developments. Our results show that when official accounts respond to events promptly, it gives the organization or person more credibility, especially in the context of natural disasters where people count on them to stay safe and informed on the changing situation.</font>
+- <font size="4">With a mounting number of people using Twitter, data collected from social media is useful in offering insight into public opinion. It makes it easier to overcome public misperception and helps different actors in responding to crises in a way that benefits the collective.</font>
+- <font size="4">When it comes to crisis communications, while other forms of communication such as email, television, phone calls, or websites can be impractical in informing the public, social media offers a more direct connection that facilitates communication. In the case of Twitter, retweets permeate information at a rapid pace, which enables a message to be communicated to a large number, of people, which can potentially limit disaster.</font>
+
+
 ## References
+<font size = "4">Ceron, Andrea. (2014). Twitter and the Traditional Media: Who is the Real Agenda Setter?. APSA 2014 Annual Meeting Paper</font>
+
 <font size="4">Cottle, Simon. (2014). Rethinking Media and Disasters in a Global Age: What's Changed and Why It Matters. Media, War & Conflict. 7. 3-22.10.1177/1750635213513229. https://www.researchgate.net/publication/270633894_Rethinking_Media_and_Disasters_in_a_Global_Age_What's_Changed_and_Why_It_Matters </font>
+
+<font size="4">Crawford, Kate and Finn, Megan. (2015). The limits of crisis data: analytical and ethical challenges of using social and mobile data to understand disasters. GeoJournal. 80. 491-502 https://www.researchgate.net/publication/285401858_The_limits_of_crisis_data_analytical_and_ethical_challenges_of_using_social_and_mobile_data_to_understand_disasters</font>
 
 <font size="4">Elliott, Jennifer. “8 Best Practices for Emergency Communications on Social Media.” EfficientGov, 19 July 2018, 
 https://www.efficientgov.com/community-engagement/articles/8-best-practices-for-emergency-communications-on-social-media-vwZS7OO5eoblrs3G/. </font>
@@ -210,18 +208,21 @@ https://www.chicoer.com/2019/11/07/timeline-breaking-down-nov-8-the-day-the-camp
 <font size="4">Ford, Jordan. “Improving Disaster Response through Twitter Data.” Penn State University, 2018, 
 https://news.psu.edu/story/527730/2018/07/10/research/improving-disaster-response-through-twitter-data. </font>
 
-<font size="4">Kearney MW (2019). “rtweet: Collecting and analyzing Twitter data.” Journal of Open Source Software, 4(42), 1829. Doi: 10.21105/joss.01829, R package version 0.7.0, https://joss.theoj.org/papers/10.21105/joss.01829. </font>
  
 
 
 
 ## References cont. 
 
+<font size="4">Kearney MW (2019). “rtweet: Collecting and analyzing Twitter data.” Journal of Open Source Software, 4(42), 1829. Doi: 10.21105/joss.01829, R package version 0.7.0, https://joss.theoj.org/papers/10.21105/joss.01829. </font>
+
 <font size="4">R Core Team (2019). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org. </font>
 
 <font size="4">Radio Ink (March 3, 2020). “The Decline of the Home Radio”.  https://radioink.com/2020/03/03/the-decline-of-the-home-radio/ </font>
 
 <font size="4">Rice, Doyle (January 8, 2019). “USA had world’s 3 costliest natural disasters in 2018, and Camp Fire was the worst”. USA Today. </font>
+
+<font size="4">Social Blade. “Cal Fire's Twitter Stats Summary Profile.” Social Blade, 2020, socialblade.com/twitter/user/cal_fire.</font>
 
 <font size="4">St. John, Paige, and Joseph Serna. “Camp Fire Evacuation Warnings Failed to Reach More than a Third of Residents Meant to Receive Calls.” Los Angeles Times, 1 Dec. 2018, 
 https://www.latimes.com/local/california/la-me-ln-paradise-evacuation-warnings-20181130-story.html. </font>
