@@ -20,11 +20,14 @@ library(plotly)
 
 
 ## -----------------------------------------------------------------------------
-cf <- readRDS("data/campfire-tweets-2020-04-26.Rds")
+cf <- readRDS("data/campfire-tweets-2020-04-27.Rds")
 
+first_morning <- filter(cf, created_at_pst < "2018-11-08 12:00:00")
 
-first_morning <- cf %>% filter(created_at_pst < "2018-11-08 12:00:00") %>%
-  filter(created_at_pst > "2018-11-08 06:51:46")
+first_morning <- filter(first_morning, created_at_pst > "2018-11-08 06:51:46")
+
+# first_morning <- cf %>% filter(created_at_pst < "2018-11-08 12:00:00") %>%
+#   filter(created_at_pst > "2018-11-08 06:51:46")
 
 names <- c("CALFIRE_ButteCo", "Cal_Fire", "ButteSheriff", "ChicoPolice", "ChicoFD", "CountyOfButte", "Paradise_CA", "PGE4Me")
 
