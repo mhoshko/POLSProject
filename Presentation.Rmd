@@ -56,7 +56,6 @@ knitr::opts_chunk$set(echo = FALSE)
 - <font size="5">Limits to crisis data</font>
   - <font size="4">When data collection starts, social media platforms can create analytical and ethical oversights (limited access to the internet during a disaster: power outages, etc) (Crawford and Finn 2015).</font>
   - <font size="4">Traditional media was state-controlled, but that changed in more recent years (Crawford and Finn 2015).</font>
-  - <font size="4">Traditional media was state-controlled, but that changed in more recent years (Crawford and Finn 2015).</font>
   - <font size="4">People cannot control how their data is used: privacy issue (Crawford and Finn 2015).</font>
 
 ## Research Problem and Topic Area
@@ -169,11 +168,11 @@ plot1
 
 ## The Media Response Compared to Public Response
 <font size="4.5">After eliminating retweets for public tweets the following timeline compares the timing of tweets by the public vs the local media for the morning up until 10:00 AM. </font>
-
+<div align = "left">
 ```{r, echo=FALSE, fig.width=7}
 plot2
 ```
-
+</div>
 # Discussion/Conclusion
 
 ## What Does it All Mean?

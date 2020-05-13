@@ -183,7 +183,7 @@ m <- list(
 )
 
 plot1 <- day_timeline %>%
-  layout(autosize = T, width=1100, margin = m)
+  layout(autosize = T, width=950, margin = m)
 plot1
 
 
@@ -231,7 +231,7 @@ m <- list(
 )
 
 plot2 <- day_timeline2 %>%
-  layout(autosize = T, width = 1100, margin = m)
+  layout(autosize = T, width = 950, margin = m)
 plot2
 
 
