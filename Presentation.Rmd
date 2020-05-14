@@ -14,7 +14,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Comparing the Twitter Response Times of the Public and Local Officials During the Camp Fire | Olivia Plazanet, Madeline Hoshko and Taylor Hinchliff
+## Comparing the Twitter Response Times of the Public and Local Officials During the Camp Fire | Olivia Plazanet, Madeline Hoshko and Taylor Hinchcliff
 
 
 # Introduction and Background
