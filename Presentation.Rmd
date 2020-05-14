@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = FALSE)
   - <font size="5">Natural disaster require timely warnings and information. This makes it easier to overcome public misperception and helps different actors in responding to crises in a way that benefits the collective.</font>
 - <font size="5">How credible is this information?</font>
 - <font size="5">What about using television? Phone calls? Radio?</font>
-- <font size="5">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices, which can literally be life-saving information during disasters. </font> 
+- <font size="5">That is why it is also very important to examine the times it takes for officials to issue official information and warnings to the public, such as evacuation notices, which can literally be life-saving information during disasters.</font> 
 
 ## Why Use Twitter?
 - <font size="5">Fewer people are using television and radio than ever before.</font>
@@ -35,6 +35,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - <font size="5">77% of journalists say social media is important to them for learning about potential stories more quickly, and that it is important in reporting stories more quickly (Elliott 2018).</font>
 - <font size="5">During November of 2018 alone, CalFire’s official Twitter account gained about 35k followers, which shows them to be an important source of information for the public (SocialBlade, 2020).</font>
 
+
 ## Background and Lit Review 
 - <font size="5">Disaster Response and Twitter</font>
   - <font size="4">Why is Twitter data important during disasters?</font>
@@ -42,14 +43,13 @@ knitr::opts_chunk$set(echo = FALSE)
   - <font size="4">There is a need for unique updates across organizations given the volume of data produced because manually managing is not always practical right after a disaster (Ford, 2018).</font>
 
 - <font size="5">Potential Flaws in Phone-Based Warning Systems</font>
-  - <font size="4">"Butte County Sheriff’s office showed that the first evacuation orders requested by firefighters failed to connect. Half of the calls went to voicemail (St. John and Serna, 2018).”</font>
-  - <font size="4">This inefficiency presents a real problem within our system.</font>
+  - <font size="4">“Butte County Sheriff’s office showed that the first evacuation orders requested by firefighters failed to connect. Half of the calls went to voicemail (St. John and Serna, 2018).”</font>
   - <font size="4">The police chief of Paradise said “there was no time for a citywide evacuation order — the city’s own system went down in the midst of a partial order” (St. John and Serna, 2018). With California having the most Twitter users, there needs to be a wide array of emergency notification methods through Twitter (Stirtz, 2020).</font>
 
 ## Background and Lit Review 
 
 - <font size="5">Refiguration of disaster social relations</font>
-  - <font size="4">New communication technologies replacing traditional media, transformation of disaster visibility (Cottle 2014).</font>
+  - <font size="4">New communication technologies replacing traditional media, transformation of disaster visibility (Cottle 2014). </font>
   - <font size="4">Individuals are central in emergency responses (Cottle 2014).</font>
   - <font size="4">Civilian surge of information and worldwide engagement because of fast-flowing information, collaboration between citizens, disaster relief agencies, volunteers, and public figures (Cottle 2014).</font>
 
